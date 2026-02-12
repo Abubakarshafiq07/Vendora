@@ -1,0 +1,56 @@
+# .gitignore for .NET 9 / Visual Studio projects
+
+# Build outputs
+bin/
+obj/
+artifacts/
+out/
+publish/
+
+# Configuration-specific build folders
+Debug/
+Release/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Visual Studio Code / Rider
+.vscode/
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.ldb
+
+# Symbols and caches
+*.pdb
+*.cache
+
+# User secrets and local settings
+secrets.json
+appsettings.Development.json
+
+# Misc
+*.vsix
+*.vsixmanifest
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
