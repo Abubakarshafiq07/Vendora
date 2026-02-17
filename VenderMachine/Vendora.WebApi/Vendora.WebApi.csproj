@@ -14,8 +14,4 @@
     <ProjectReference Include="..\Vendora.Application\Vendora.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
