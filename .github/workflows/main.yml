@@ -1,23 +1,21 @@
-name: Build and Test
+name: Build CI
 
 on:
   push:
-    branches:
-      - main
-      - develop
-
+    branches: [ main, develop ]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [ main, develop ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: VenderMachine
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup .NET
@@ -26,10 +24,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore Dependencies
-        run: dotnet restore
+        run: dotnet restore Vendora.sln
 
       - name: Build Solution
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build Vendora.sln --no-restore --configuration Release
 
-      - name: Run Tests
-        run: dotnet test --no-build --configuration Release
+      - name: No Tests Available
+        run: echo "No test project exists yet. Skipping test stage."
